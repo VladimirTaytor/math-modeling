@@ -1,13 +1,5 @@
 import Plotly from 'plotly.js-dist';
-import OneDimMassTransfer from "../problems/OneDimMassTransfer";
 import solveOneDimMassTempTransferProblem from "../problems/OneDimTempMassTransfer";
-
-// // Розв'язок задачі
-// const problem = new OneDimMassTransfer();
-// const result = problem.solve();
-//
-// // Виведення даних на графіку
-// const xAxis = problem.getXAxis();
 
 const props = { h: 1, t: 400 };
 const result = solveOneDimMassTempTransferProblem(props);
@@ -33,7 +25,7 @@ const getLayout = (t, range=[0, 2]) => ({
 const renderPlot = (t, data=[], div, range=[0, 0.5]) => {
   const renderData = [{
     mode: 'lines',
-    line: {color: "#b55400"},
+    line: {color: "blue"},
     y: data[t],
     x: xAxis,
   }];
